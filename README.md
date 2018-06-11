@@ -1,4 +1,5 @@
 ### install
 yarn add axios 
-yarn add @kyy/xhr
-import '@kyy/xhr'
+yarn add lru-cache 
+yarn add lt-xhr
+import xhr, { Xhr } from 'lt-xhr'
