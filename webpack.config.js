@@ -54,6 +54,7 @@ var config = {
     path: path.resolve('./dist'),
     filename: '[name].js',
     sourceMapFilename: '[name].map',
+    libraryTarget: 'commonjs',
     devtoolModuleFilenameTemplate: function (info) {
       return 'file:///' + info.absoluteResourcePath;
     },
