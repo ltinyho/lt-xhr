@@ -52,13 +52,9 @@ var config = {
   output: {
     path: path.resolve('./dist'),
     filename: '[name].js',
-    sourceMapFilename: '[name].map',
+    sourceMapFilename: '[name].map.js',
     libraryTarget: 'umd',
-    devtoolModuleFilenameTemplate: function (info) {
-      return 'file:///' + info.absoluteResourcePath;
-    },
   },
-
   module: {
     rules: [
       {
