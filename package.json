@@ -27,7 +27,7 @@
     "url": "https://github.com/ltinyho/lt-xhr/issues"
   },
   "homepage": "https://github.com/ltinyho/lt-xhr",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
     "lru-cache": "^4.1.3"
