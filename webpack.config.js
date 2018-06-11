@@ -28,7 +28,7 @@ const plugins = [
     },
   }),
   new HtmlWebpackPlugin({
-    title: 'Typescript Webpack Starter',
+    title: require('./package').name,
     template: '!!ejs-loader!src/index.html',
   }),
   new webpack.LoaderOptionsPlugin({
@@ -47,14 +47,13 @@ if (!isProd) {
 
 var config = {
   devtool: isProd ? 'hidden-source-map' : 'source-map',
-  target: 'node',
   context: path.resolve('./src'),
   entry: './index.ts',
   output: {
     path: path.resolve('./dist'),
     filename: '[name].js',
     sourceMapFilename: '[name].map',
-    libraryTarget: 'commonjs',
+    libraryTarget: 'umd',
     devtoolModuleFilenameTemplate: function (info) {
       return 'file:///' + info.absoluteResourcePath;
     },

@@ -6,18 +6,27 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "baseUrl": ".",
     "lib": [
       "es2015",
       "dom"
     ],
     "types": [
-      "jasmine",
+      "jest",
       "lru-cache",
       "node"
     ],
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "paths": {
+      "src/*": [
+        "src/*"
+      ]
+    }
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist"
