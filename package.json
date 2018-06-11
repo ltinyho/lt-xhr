@@ -1,6 +1,7 @@
 {
   "name": "lt-xhr",
   "version": "1.0.1",
+  "description": "axios and lru-cache",
   "main": "dist/main.js",
   "scripts": {
     "start": "npm run server:dev",
@@ -13,7 +14,24 @@
     "clean": "npm cache clear && rimraf -- dist",
     "test": "jest"
   },
+  "keywords": [
+    "xhr",
+    "cache"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:ltinyho/lt-xhr.git"
+  },
+  "author": "ltinyho",
+  "bugs": {
+    "url": "https://github.com/ltinyho/lt-xhr/issues"
+  },
+  "homepage": "https://github.com/ltinyho/lt-xhr",
   "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lru-cache": "^4.1.3"
+  },
   "devDependencies": {
     "@types/jest": "^23.0.0",
     "@types/lru-cache": "^4.1.1",
@@ -30,16 +48,12 @@
     "rimraf": "^2.6.1",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
+    "ts-jest": "^22.4.6",
     "tslint": "^5.5.0",
     "tslint-loader": "^3.5.3",
     "typescript": "^2.7.1",
     "webpack": "^3.3.0",
     "webpack-dashboard": "^0.4.0",
     "webpack-dev-server": "2.5.1"
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "lru-cache": "^4.1.3",
-    "ts-jest": "^22.4.6"
   }
 }
