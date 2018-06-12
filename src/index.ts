@@ -4,6 +4,13 @@ import * as  qs from 'querystring';
 import * as  LruCache from 'lru-cache';
 import { CustomConfig, XhrRequestConfig } from './types';
 
+axios.defaults.transformRequest = [function (data) {
+  if (typeof data === 'object') {
+    data = qs.stringify(data);
+  }
+  return data;
+}];
+
 export class Xhr {
   static cache = LruCache({ max: 500 });
 
