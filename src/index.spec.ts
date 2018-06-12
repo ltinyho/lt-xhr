@@ -16,10 +16,10 @@ test('测试普通xhr函数', (done) => {
 
 test('测试自定义 custom 函数', (done) => {
   const customXhr = Xhr.custom({
-    baseURL: hostname
+    baseURL: hostname,
   });
   customXhr({
-    url: url
+    url: url,
   }).then((data: any) => {
     expect(data.code).toBe(200);
     done();
@@ -36,8 +36,8 @@ test('测试缓存', (done) => {
       filter(data: any) {
         expect(data.code).toBe(200);
         return data.code === 200;
-      }
-    }
+      },
+    },
   }).then((data: any) => {
     const cacheData: any = Xhr.cache.values()[0];
     expect(cacheData.code).toBe(200);
@@ -47,3 +47,4 @@ test('测试缓存', (done) => {
     done();
   });
 });
+

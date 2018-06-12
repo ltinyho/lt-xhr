@@ -14,6 +14,17 @@ yarn add lt-xhr
 
 
 ### usage
-```bash
+```js
 import xhr, { Xhr } from 'lt-xhr'
+class TestSrv {
+  getList(id) {
+    return xhr({
+      url: `/test`,
+      cache: true, // 缓存
+      params: {
+        id,
+      },
+    });
+  }
+}
 ```

@@ -5,7 +5,7 @@ import * as  LruCache from 'lru-cache';
 import { CustomConfig, XhrRequestConfig } from 'src/types';
 
 export class Xhr {
-  static cache = LruCache({max: 500});
+  static cache = LruCache({ max: 500 });
 
   constructor() {
   }
@@ -28,12 +28,14 @@ export class Xhr {
       const data = res.data;
       if (setting.cache) {
         // 通过结果判断是否缓存
-        if (setting.cache.filter && typeof setting.cache.filter === 'function') {
-          if (setting.cache.filter(data)) {
-            Xhr.cache.set(cacheKey, data);
+        if (typeof setting.cache === 'boolean') {
+          Xhr.cache.set(cacheKey, data);
+        } else if (typeof setting.cache === 'object') {
+          if (setting.cache.filter && typeof setting.cache.filter === 'function') {
+            if (setting.cache.filter(data)) {
+              Xhr.cache.set(cacheKey, data);
+            }
           }
-        } else {
-          this.cache.set(cacheKey, data);
         }
       }
       return data;
@@ -50,5 +52,4 @@ export class Xhr {
 
 const xhr = Xhr.xhr;
 export default xhr;
-
 
