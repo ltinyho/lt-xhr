@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as url from 'url';
 import * as  qs from 'querystring';
 import * as  LruCache from 'lru-cache';
-import { CustomConfig, XhrRequestConfig } from 'src/types';
+import { CustomConfig, XhrRequestConfig } from './types';
 
 export class Xhr {
   static cache = LruCache({ max: 500 });

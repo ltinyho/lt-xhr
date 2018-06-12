@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "axios and lru-cache",
   "main": "dist/main.js",
+  "typings": "src/index.d.ts",
   "scripts": {
     "start": "npm run server:dev",
     "dev": "npm run server:dev",
@@ -43,7 +44,6 @@
     "eslint": "^4.2.0",
     "html-loader": "^0.4.5",
     "html-webpack-plugin": "^2.29.0",
-    "istanbul-instrumenter-loader": "^3.0.0",
     "jest": "^23.1.0",
     "rimraf": "^2.6.1",
     "source-map-loader": "^0.2.1",

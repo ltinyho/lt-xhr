@@ -63,14 +63,6 @@ var config = {
         exclude: ['node_modules'],
         use: ['awesome-typescript-loader', 'source-map-loader'],
       },
-      {
-        test: /\.(js|ts)$/,
-        loader: 'istanbul-instrumenter-loader',
-        exclude: [/\/node_modules\//],
-        query: {
-          esModules: true,
-        },
-      },
       { test: /\.html$/, loader: 'html-loader' },
       { test: /\.css$/, loaders: ['style-loader', 'css-loader'] },
     ],

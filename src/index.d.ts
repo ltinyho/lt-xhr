@@ -1,5 +1,5 @@
 import * as LruCache from 'lru-cache';
-import { CustomConfig, XhrRequestConfig } from 'src/types';
+import { CustomConfig, XhrRequestConfig } from './types';
 export declare class Xhr {
     static cache: LruCache.Cache<{}, {}>;
     constructor();

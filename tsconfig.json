@@ -17,12 +17,7 @@
       "node"
     ],
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "paths": {
-      "src/*": [
-        "src/*"
-      ]
-    }
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": [
     "src/**/*.ts"
