@@ -51,7 +51,9 @@ export class Xhr {
 
   public static custom(settting: CustomConfig) {
     return (set: XhrRequestConfig) => {
-      set.url = settting.baseURL + set.url;
+      if (settting.baseURL) {
+        set.url = settting.baseURL + set.url;
+      }
       return this.xhr(set);
     };
   }
