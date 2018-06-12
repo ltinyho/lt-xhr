@@ -1,6 +1,6 @@
 {
   "name": "lt-xhr",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "axios and lru-cache",
   "main": "dist/main.js",
   "typings": "src/index.d.ts",
