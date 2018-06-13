@@ -1,6 +1,6 @@
 {
   "name": "lt-xhr",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "axios and lru-cache",
   "main": "dist/main.js",
   "typings": "src/index.d.ts",
@@ -31,11 +31,11 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "lru-cache": "^4.1.3"
+    "lru-cache": "^4.1.3",
+    "@types/lru-cache": "^4.1.1"
   },
   "devDependencies": {
     "@types/jest": "^23.0.0",
-    "@types/lru-cache": "^4.1.1",
     "@types/node": "^10.3.2",
     "awesome-typescript-loader": "^3.2.1",
     "cross-env": "^5.0.1",
