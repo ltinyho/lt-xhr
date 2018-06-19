@@ -1,12 +1,12 @@
 import axios from 'axios';
 import * as url from 'url';
-import * as  qs from 'querystring';
+import * as  qs from 'qs';
 import * as  LruCache from 'lru-cache';
 import { CustomConfig, XhrRequestConfig } from './types';
 
 axios.defaults.transformRequest = [function (data) {
   if (typeof data === 'object') {
-    data = qs.stringify(data);
+    data = qs.stringify(data, { arrayFormat: 'brackets' });
   }
   return data;
 }];

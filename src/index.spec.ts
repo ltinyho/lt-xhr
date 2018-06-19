@@ -47,4 +47,16 @@ test('测试缓存', (done) => {
     done();
   });
 });
-
+test('测试post数组问题', (done) => {
+  return xhr({
+    method: 'post',
+    url: '/test',
+    data: {
+      test: [1, 2, 22, 3],
+    },
+  }).then(() => {
+    done();
+  }).catch(() => {
+    done();
+  });
+});
