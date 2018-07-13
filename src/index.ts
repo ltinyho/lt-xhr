@@ -13,6 +13,7 @@ axios.defaults.transformRequest = [function (data) {
 
 export class Xhr {
   static cache = LruCache({ max: 500 });
+  static axios = axios;
 
   constructor() {
   }
@@ -31,7 +32,7 @@ export class Xhr {
         });
       }
     }
-    return axios(setting).then((res) => {
+    return Xhr.axios(setting).then((res) => {
       const data = res.data;
       if (setting.cache) {
         // 通过结果判断是否缓存
